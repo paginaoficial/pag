@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&family=Lemonada:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">     
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1ec203c188.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="imgs/icono.png">
+    <title>Reservación</title>
+    <style>
+        :root{
+            --primary:#000;
+            --secundary:#000;
+            --background:#000;
+            --black-text:#fff;
+            --white-text:#ffffff;
+            --button-hover:#83DCEF;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body{
+
+            font-family: 'Lemonada', cursive;
+            background-image: url(https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_960_720.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        
+
+        }
+        h1{
+            font-family: Permanent Marker;
+        }
+
+        h1 span:hover{
+            letter-spacing: 10px;
+            text-shadow:0px 0px 20px #83DCEF ;          
+            color:#83DCEF ;
+            transition: all .5s;
+        }
+
+        nav{
+            background-color: var(--primary);
+            height: 10vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 100;
+            position: relative;
+            box-shadow: 0px 0px 19px 5px #03DCEF;             
+
+        }
+        nav a img:hover{
+            transform: rotate(360deg);
+            transition: all 3s;
+
+        }
+
+
+        header h1{
+            color: var(--white-text);
+            font-size: 2rem;
+            font-family: 'Caveat', cursive
+            letter-spacing: .7rem;
+        }
+
+        nav ul{
+            display: flex;
+        }
+
+        nav ul li{
+            border-right: solid .1rem rgba(61, 61, 61, 0.41);
+
+        }
+
+        nav ul li:last-child{
+            border-right: none;
+            
+        }
+
+        nav ul li a {
+            color: var(--white-text);
+            font-size: 1.2rem;
+            font-family: 'Pacifico', cursive;
+            padding: .8rem 1rem;
+            text-align: left;
+            
+        }
+
+        nav ul li a:hover{
+            background-color: #03DCEF;
+            transition: all .5s;
+            border-radius: 10px;
+            box-shadow: 0px 0px 19px 5px #03DCEF;            
+
+            
+
+        }
+
+        nav ul li span a{
+            background-color: #03DCEF ;
+            font-size: 1.2rem;
+            padding: .8rem 1rem;
+            text-align: left;
+            border-radius: 10px;
+
+        } 
+
+
+        .drawer{
+            color: var(--white-text);
+            float: left;
+            cursor: pointer;
+            display: none;
+            margin-left: 1rem;
+            border: solid .1rem var(--white-text);
+            padding: .2rem;
+            border-radius: .1rem;
+        }
+
+        #ckbox{
+            display: none;
+        }
+        /* Estilos de la seccion principal */
+
+        main{
+            padding-top: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        main form{
+            justify-content: center;
+         }
+
+
+        footer{
+            background-color: var(--primary);
+            color: var(--white-text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            text-align: center;
+            box-shadow:-5px 5px 35px #03DCEF ; 
+
+
+
+
+        }
+  
+        footer a{
+            color: white;
+            font-family: Permanent Marker;
+
+        }
+
+         footer a:hover{
+            color: #83DCEF;
+            transition: all .5s;
+            letter-spacing: 10px;
+            text-shadow:-5px 5px 35px #83DCEF ;
+                    }
+         #facebook{
+            color: white;
+        }
+
+        #instagram{
+            color: white;
+        }
+
+        #twitter{
+            color: white;
+        }
+
+        #Whatsapp{
+            color: white;
+        }
+
+        #facebook:hover{
+             color: #83DCEF;
+             transition: all .3s;
+             font-size: 20px;
+             text-shadow:-5px 5px 35px #83DCEF ;
+
+
+
+        }
+
+        #instagram:hover{
+            color: #83DCEF;
+             transition: all .3s; 
+             font-size: 20px;
+             text-shadow:-5px 5px 35px #83DCEF ;            
+
+
+;
+        }
+
+        #twitter:hover{
+            color: #83DCEF;
+             transition: all .3s;
+             font-size: 20px;
+             text-shadow:-5px 5px 35px #83DCEF ; 
+        }
+
+        #Whatsapp:hover{
+            color: #83DCEF;
+             transition: all .3s;
+             font-size: 20px;
+             text-shadow:-5px 5px 35px #83DCEF ;     
+
+
+        }
+
+
+        .container{
+            max-width: 800px;
+            width: 100%;
+            background: #000;
+            color: #fff;
+            padding: 25px 30px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 19px 5px rgba(255,255,255,0.9);
+            
+        }
+        .container .title{
+            font-size: 25px;
+            font-weight: 500;
+            position: relative;
+            text-align: center;
+        }
+        .container .title::before{
+            content: ´´;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+        .container form .user-details{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0 12px 0;
+        }
+        form .user-details .input-box{
+            margin-bottom: 15px;
+            width: calc(100% / 2 - 20px);
+
+        }
+        .user-details .input-box .details{
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        #telefono{
+            background-color: white;
+            background-image: url("https://cdn.icon-icons.com/icons2/2248/PNG/512/phone_in_talk_icon_137309.png");
+            background-repeat: no-repeat;
+            background-position: 300px 10px;
+            background-size: 30px 30px;
+            
+        }
+        #nombre{
+            background-color: white;
+            background-image: url("https://cdn.icon-icons.com/icons2/1369/PNG/512/-person_90382.png");
+            background-repeat: no-repeat;
+            background-position: 300px 10px;
+            background-size: 30px 30px;
+            
+        }
+        
+        #personas{
+            background-color: white;
+            background-image: url("https://static.vecteezy.com/system/resources/previews/000/643/326/non_2x/vector-group-people-icon.jpg");
+            background-repeat: no-repeat;
+            background-position: 300px 10px;
+            background-size: 30px 30px;
+            
+        }
+        #tipo{
+            background-color: white;
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Aiga_restaurant_knife-fork_crossed.png/1200px-Aiga_restaurant_knife-fork_crossed.png");
+            background-repeat: no-repeat;
+            background-position: 300px 10px;
+            background-size: 30px 30px;
+            
+        }
+        .user-details .input-box input{
+            height: 45px;
+            width: 100%;
+            outline: none;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            padding-left: 15px;
+            font-size: 16px;
+            border-bottom-width: 2px;
+            transition: all 0.3s ease;
+        }
+        .user-details .input-box input:focus,
+        .user-details .input-box input:valid{
+            border-color: #2D88FF;
+        }
+        form .gender-details .gender-title{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        form .gender-details .category{
+            display: flex;
+            width: 80%;
+            background: #2D88FF;
+            margin: 14px 0;
+            justify-content: space-between;
+        }
+
+        form .button input{
+            height: 100%;
+            width: 100%;
+            outline: none;
+            color: #fff;
+            background: linear-gradient(135deg, #2D88FF, #83DCEF);
+            border: none;
+            font-size: 18px;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            padding: 7px 7px;
+            position: relative;
+
+        }
+        form .button input:hover{
+            background: linear-gradient(-135deg, #2D88FF, #83DCEF);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        @media (max-width: 584px) {
+            .container{
+            max-width: 100%;
+
+            }
+            form .user-details .input-box{
+            margin-bottom: 15px;
+            width: 100%;
+
+            }
+            form .gender-details .category{
+                width: 100%;
+            }
+            .container form .user-details{
+                max-height: 300px;
+                overflow-y: scroll;
+                
+            }
+            .user-details::-webkit-scrollbar{
+                width: 0;
+            }
+            nav{
+                justify-content: flex-start;
+                margin-bottom: 100px;
+            }
+
+            .drawer{
+                display: block;
+            }
+
+            nav h1{
+                margin-left: 1rem;
+                display: block;
+
+            }
+            nav p{
+                display: flex;
+            }
+
+            ul{
+                position: fixed;
+                width: 50%;
+                height: 100vh;
+                background-color: var(--background);
+                top: 10vh;
+                left: -100%;
+                text-align: left;
+                transition: all .5s;
+                display: flex;
+                flex-direction: column;
+                align-content: stretch;
+            }
+
+            nav ul li{
+                padding: 1rem 0;
+                display: flex;
+                flex-direction: column;
+                padding-left: 2rem;
+                border-bottom: solid .1rem rgba(201, 196, 196, 0.4) ;
+
+            }
+
+            #ckbox:checked ~ .menu-box{
+                left: 0;
+            }
+        
+    }
+
+
+
+        
+    </style>
+</head>
+<body >
+    <header>
+        <nav>
+            <input type="checkbox" id="ckbox">
+            <label for="ckbox" class="drawer">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+            <a href="index.html"><img src="imgs/logo.png" alt="logo" width="70px" height="auto"></a>
+            <h1><span>Jiro's Resturant</span></h1>
+
+            <ul class="menu-box">
+                <li><a href="index.html" class="fa fa-home"> Inicio</a></li>
+                <li><a href="conocenos.html" class="fas fa-info-circle"> Conócenos</a></li>
+                <li><a href="menu1.html" class="fas fa-clipboard-list"> Menú</a></li>
+                <li><span><a href="reservaciones.html" class="far fa-credit-card"> Reservaciones</a></span></li>
+                <li><a href="contacto.html" class="fas fa-user"> Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="title"><h1>¡ Reserva tu mesa !</h1></div>
+            <form action="#" autocomplete="off">
+                 <div class="user-details">
+                    <div class="input-box">
+                        <span class="details" ><h2>Nombre</h2></span>
+                        <input type="text" id="nombre" maxlength="30" placeholder="Nombre" required autofocus>
+                    </div>
+                    <div class="input-box">
+                        <span class="details" ><h2>Tipo de Reservación</h2></span>
+                        <input type="text" id="tipo" placeholder="Personal/Empresarial" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details" ><h2>Telefono</h2></span>
+                        <input type="text" id="telefono" maxlength="8" placeholder="Número de telefono" required>
+                    </div>
+                 <div class="input-box">
+                     <span class="details"><h2>Fecha</h2></span>
+                     <input type="date" placeholder="Fecha de la reservación" required>
+                 </div>
+                 <div class="input-box">
+                    <span class="details"><h2>Hora</h2></span>
+                    <input type="time" placeholder="Hora de la reservación" required>
+                </div>
+                <div class="input-box">
+                    <span class="details" ><h2>N° Personas</h2></span>
+                    <input type="number" id="personas" min="1" max="10" value="1 Persona" placeholder="Personas que asistiran" required ></div>                
+              </div>
+              <br>
+              <div class="button">
+                <input type="submit" value="Reservar">
+              </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <h2><b><a href="index.html"><span class="one">Jiro's Restaurant</a></b> &copy;2021 | Todos los derechos Reservados</h2>
+            
+        
+
+        
+    </footer>
+
+   
+    
+</body>
+</html>

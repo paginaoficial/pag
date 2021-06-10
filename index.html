@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/icono.png">
+	<script src="https://kit.fontawesome.com/8d62243779.js" crossorigin="anonymous"></script>
+	<title>Jiro's Restaurant</title>
+
+	<style>
+
+		*{
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			box-sizing: border-box;
+
+		}
+
+		body{
+			font-family: Arial, Helvetica, san-serif;
+			background-image: url(https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_960_720.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			overflow: hidden;
+		}
+
+
+
+		nav{
+			background: black;
+			height: 10vh;
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			text-align: center;
+      		box-shadow:-5px 5px 35px #83DCEF ; 			
+
+
+
+		}
+
+		header h1{
+			font-family: Permanent Marker;
+			color: white;
+			font-size: 3em;
+
+
+
+		}
+
+		header h1:hover{
+			color: #83DCEF;
+			transition: all .5s;
+			letter-spacing:30px;
+			text-shadow:-5px 5px 35px #83DCEF ;			
+		}
+		main{
+			font-size: 1.7em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 80vh;
+		}
+
+		main h2{
+			font-size: 1.7em;
+			text-align: center;
+			margin: 1em;
+			text-shadow:0px 0px 35px rgba(0,0,0,0.8);
+			color: white;
+			font-family: 'Courgette', cursive;
+
+		}
+
+		main h2:hover{
+			font-family: Pacifico;
+			transition: all .5s;
+			letter-spacing: 2px;
+			text-shadow:-5px 5px 35px #83DCEF ;
+
+		}
+
+		main form{
+			display: flex;
+			justify-content: center;
+
+		}
+
+		main form button{
+			margin: 0.5rem;
+			width: 10rem;
+			height: 4.5rem;
+			font-size: 1.5rem;
+		}
+
+		.boton{
+			background-color: #282923 ;
+			color: white;
+			border: none;
+			border-radius: 10px;
+			box-shadow:-5px 5px 35px #83DCEF ;			
+
+
+		}
+
+		.boton:hover{
+			background-color: #83DCEF;
+			width: 200px;
+			margin: 20px;
+			transition: all .5s;
+			box-shadow:0px 0px 35px white;
+			letter-spacing: 10px;
+		}
+
+		footer{
+			background-color: black;
+			color: white;
+			width: 100%;
+			height: 12vh;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+      		box-shadow:-5px 5px 35px #83DCEF ; 					
+		}
+
+		footer h2{
+			font-size: 1.8em;
+		}
+
+		footer a{
+			color: white;
+			font-family: Permanent Marker;
+		}
+
+         footer a:hover{
+        	color: #83DCEF;
+        	transition: all .5s;
+        	letter-spacing: 10px;
+        	text-shadow:-5px 5px 35px #83DCEF ;
+        	        }
+		 #facebook{
+        	color: white;
+        }
+
+        #instagram{
+        	color: white;
+        }
+
+        #twitter{
+        	color: white;
+        }
+
+        #Whatsapp{
+        	color: white;
+        }
+
+        #facebook:hover{
+      		 color: #83DCEF;
+      		 transition: all .3s;
+      		 font-size: 20px;
+      		 text-shadow:-5px 5px 35px #83DCEF ;
+
+
+
+        }
+
+        #instagram:hover{
+        	color: #83DCEF;
+      		 transition: all .3s; 
+      		 font-size: 20px;
+      		 text-shadow:-5px 5px 35px #83DCEF ;        	
+
+
+;
+        }
+
+        #twitter:hover{
+        	color: #83DCEF;
+      		 transition: all .3s;
+      		 font-size: 20px;
+      		 text-shadow:-5px 5px 35px #83DCEF ; 
+        }
+
+        #Whatsapp:hover{
+        	color: #83DCEF;
+      		 transition: all .3s;
+      		 font-size: 20px;
+      		 text-shadow:-5px 5px 35px #83DCEF ; 
+;
+        }	
+
+        .image{
+
+		animation: rotate 3s infinite;
+		animation-name: rotate;
+		animation-duration: 3s;
+		object-fit: cover;
+
+
+
+
+}	
+	
+		nav a img{
+			height: 100%;
+		}
+		nav a img:hover{
+			transform: rotate(360deg);
+			transition: all 3s;
+
+		}
+
+
+
+
+		   @keyframes rotate {
+		0%, 100% {
+		transform: rotate(30deg);
+		}
+		50% {
+		transform: rotate(-30deg);
+		}
+}
+
+
+
+
+        @media(max-width:1020px){
+
+            nav{
+                justify-content: flex-start;
+                text-align: center;
+                align-content: center;
+            }
+
+
+            nav h1{
+                margin-left: 1rem;
+                text-align: center;
+            }
+
+           
+            header h1:hover{
+
+			letter-spacing:2px;
+  		}
+           
+            
+
+            .image{
+                display: none;
+            }
+
+              footer a:hover{
+
+        	letter-spacing: 0px;
+
+
+
+}
+
+	nav{
+		display: flex;
+		height: 100%;
+	}
+
+	footer{
+
+		height: 100%;
+	}
+	body{
+		overflow-y: scroll;
+	}
+
+	nav a img{
+                display: flex-start;
+                display: none;
+            }		
+
+
+
+	</style>
+</head>
+<body>
+	<audio src="audio/ratatoullie.mp3" autoplay loop ></audio>	
+	<header>
+			<nav align="center" text-align="center">
+				<a href="index.html" id="nav"><img src="imgs/logo.png"></a>
+				<h1 id="titulo" text-align="center">Jiro's Restaurant</h1>
+
+		</nav>
+
+	</header>
+
+	<main>
+		<div class="content">
+			<h2><b>Los Platillos que se te antojen.</b></h2>
+
+			<form action="conocenos.html">
+				<button class="boton" >Mostrar Más</button>
+			</form>
+
+			
+		</div>
+		<div class="image">
+			<img src="imgs/logo.png">
+		</div>
+
+	</main>
+	<footer>
+		<h2><b><a href="index.html"><span class="one">Jiro's Restaurant</a></b> &copy;2021 | Todos los derechos Reservados</h2>
+		<a id="facebook" href="#"><i class="fab fa-facebook"></i></a> <a id="instagram" href="#"><i class="fab fa-instagram"></i></a> <a id="twitter" href="#"><i class="fab fa-twitter"></i></a> <a href="#" id="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+		
+	</footer>
+	
+</body>
+</html>

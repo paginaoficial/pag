@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&family=Lemonada:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">     
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1ec203c188.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="imgs/icono.png">
+
+    <style>
+        :root{
+            --primary:#000;
+            --secundary:#000;
+            --background:#000;
+            --black-text:#fff;
+            --white-text:#ffffff;
+            --button-hover:#83DCEF;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, san-serif;
+            background-image: url(https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_960_720.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1{
+            font-family: Permanent Marker;
+        }
+
+        h1 span:hover{
+            letter-spacing: 10px;
+             text-shadow:0px 0px 20px #83DCEF ;          
+             color:#83DCEF ;
+             transition: all .5s;
+        }
+
+        nav{
+            background-color: var(--primary);
+            height: 10vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 100;
+            position: relative;
+            box-shadow: 0px 0px 19px 5px #03DCEF;             
+
+        }
+
+        header h1{
+            color: var(--white-text);
+            font-size: 2rem;
+            font-family: 'Caveat', cursive
+            letter-spacing: .7rem;
+        }
+
+        nav ul{
+            display: flex;
+        }
+
+        nav ul li{
+            border-right: solid .1rem rgba(61, 61, 61, 0.41);
+
+        }
+
+        nav ul li:last-child{
+            border-right: none;
+            
+        }
+
+        nav ul li a {
+            color: var(--white-text);
+            font-size: 1.2rem;
+            font-family: 'Pacifico', cursive;
+            padding: .8rem 1rem;
+            text-align: left;
+            
+        }
+
+        nav ul li a:hover{
+            background-color: #03DCEF;
+            transition: all .5s;
+            border-radius: 10px;
+            box-shadow: 0px 0px 19px 5px #03DCEF;            
+
+            
+
+        }
+
+        nav ul li span a{
+            background-color: #03DCEF ;
+            font-size: 1.2rem;
+            padding: .8rem 1rem;
+            text-align: left;
+            border-radius: 10px;
+
+        } 
+
+
+        .drawer{
+            color: var(--white-text);
+            float: left;
+            cursor: pointer;
+            display: none;
+            margin-left: 1rem;
+            border: solid .1rem var(--white-text);
+            padding: .2rem;
+            border-radius: .1rem;
+        }
+
+        #ckbox{
+            display: none;
+        }
+
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 100px;
+            z-index: var(-1);
+
+
+        }
+
+  
+        .contact-box{
+            max-width: 850px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #000;
+            border-radius: 20px;
+            box-shadow: 0px 0px 19px 5px rgba(255,255,255,0.9);
+            
+
+        }
+
+        .left{
+            background: url("imgs/logo.png") no-repeat center;
+            background-size: cover;
+            height: 100%;
+        }
+
+        .right{
+            padding: 25px 40px;
+        }
+
+        #lol{
+            position: relative;
+            padding: 0 0 10px;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: -5px 5px 25px #03DCEF ;
+        }
+
+        #lol:after{
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            height: 4px;
+            width: 50px;
+            border-radius: 2px;
+            background-color: #83DCEF;
+
+        }
+
+        #lol:hover{
+            letter-spacing: 5px;
+            text-shadow: -5px 5px 25px #03DCEF ;
+            transition: all .5s;
+
+        }
+
+        .field{
+            width: 100%;
+            border: 2px solid rgba(0, 0, 0, 0);
+            outline: none;
+            background-color: rgba(255,255,255,0.9);
+            padding: 0.5rem 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 22px;
+            transition: .3s;
+            border-radius: 20px;
+
+        }
+
+        .field:hover{
+            background-color: #83DCEF;
+            box-shadow: 0px 0px 19px 5px #03DCEF; 
+
+
+        }
+
+        textarea{
+            min-height: 150px;
+        }
+
+        .btn{
+            width: 100%;
+            padding: 0.5rem 1rem;
+            background-color: #83DCEF;
+            color: #000;
+            font-size: 1.1rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: .3s;
+            border-radius: 20px;
+        }
+
+        .contact-box:hover{
+             box-shadow:-5px 5px 35px #03DCEF ; 
+             transition: all .3s;
+
+        }
+
+        .btn:hover{
+            background-color:#03DCEF;
+            color: white;
+            letter-spacing: 10px;
+             box-shadow:-5px 5px 35px #83DCEF ; 
+             transition: all .5s;
+        }
+
+        .field:focus{
+            border: 2px solid #83DCEF;
+            background-color: #fff;
+        }
+
+
+        nav a img:hover{
+            transform: rotate(360deg);
+            transition: all 3s;
+
+        }
+
+
+        footer{
+            background-color: var(--primary);
+            color: var(--white-text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            text-align: center;
+            box-shadow:-5px 5px 35px #03DCEF ; 
+
+
+
+
+        }
+  
+        footer a{
+            color: white;
+            font-family: Permanent Marker;
+
+        }
+
+         footer a:hover{
+            color: #83DCEF;
+            transition: all .5s;
+            letter-spacing: 10px;
+            text-shadow:-5px 5px 35px #83DCEF ;
+                    }
+         #facebook{
+            color: white;
+        }
+
+        #instagram{
+            color: white;
+        }
+
+        #twitter{
+            color: white;
+        }
+
+        #Whatsapp{
+            color: white;
+        }
+
+        #facebook:hover{
+             color: #83DCEF;
+             transition: all .3s;
+             font-size: 20px;
+             text-shadow:-5px 5px 35px #83DCEF ;
+
+
+
+        }
+
+        #instagram:hover{
+            color: #83DCEF;
+             transition: all .3s; 
+             font-size: 20px;
+             text-shadow:-5px 5px 35px #83DCEF ;            
+
+
+;
+        }
+
+        #twitter:hover{
+            color: #83DCEF;
+             transition: all .3s;
+             font-size: 20px;
+             text-shadow:-5px 5px 35px #83DCEF ; 
+        }
+
+        #Whatsapp:hover{
+            color: #83DCEF;
+             transition: all .3s;
+             font-size: 20px;
+             text-shadow:-5px 5px 35px #83DCEF ;     
+
+
+        }
+
+        @media(max-width:1400px){
+            body{
+                background-color: black;
+            }
+        }
+
+         @media(min-width:1600px){
+            .contact-box{
+                margin-top: 40px;
+                margin-bottom: 42px;
+            }
+         }   
+
+
+        @media(max-width:1020px){
+
+            nav{
+                justify-content: flex-start;
+                margin-bottom: 100px;
+                height: 100%;
+            }
+
+            .drawer{
+                display: block;
+            }
+
+            nav h1{
+                margin-left: 1rem;
+
+            }
+
+            ul{
+                position: fixed;
+                width: 50%;
+                height: 100vh;
+                background-color: var(--background);
+                top: 10vh;
+                left: -100%;
+                text-align: left;
+                transition: all .5s;
+                display: flex;
+                flex-direction: column;
+                align-content: stretch;
+            }
+
+            nav ul li{
+                padding: 1rem 0;
+                display: flex;
+                flex-direction: column;
+                padding-left: 2rem;
+                border-bottom: solid .1rem rgba(201, 196, 196, 0.4) ;
+
+            }
+
+            #ckbox:checked ~ .menu-box{
+                left: 0;
+            }
+
+            .image{
+                display: none;
+            }
+            .contact-box{
+                grid-template-columns: 1fr;
+            }
+            .left{
+                height: 200px;
+            }
+        }
+
+
+
+
+        </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <input type="checkbox" id="ckbox">
+            <label for="ckbox" class="drawer">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+            <a href="index.html"><img src="imgs/logo.png" alt="logo" width="70px" height="auto"></a>
+            <h1><span>Jiro's Resturant</span></h1>
+
+            <ul class="menu-box">
+                <li><a href="index.html" class="fa fa-home"> Inicio</a></li>
+                <li><a href="conocenos.html" class="fas fa-info-circle"> Conócenos</a></li>
+                <li><a href="menu1.html" class="fas fa-clipboard-list"> Menú</a></li>
+                <li><a href="reservaciones.html" class="far fa-credit-card"> Reservaciones</a></li>
+                <li> <span><a href="contacto.html" class="fas fa-user">Contáctanos</a></span></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+        <div class="contact-box">
+            <div class="left"></div>
+            <div class="right">
+                <h2 id="lol">Contácta a Jiro's Restaurant</h2>
+                <input type="text" class="field" placeholder="Nombre">
+                <input type="email" class="field" placeholder="Emali">
+                <input type="tel" class="field" placeholder="Teléfono">
+                <textarea placeholder="Mensaje" class="field"></textarea>
+                <button class="btn">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+        
+    </main>
+
+    <footer>
+        <h2><b><a href="index.html"><span class="one">Jiro's Restaurant</a></b> &copy;2021 | Todos los derechos Reservados</h2><br>
+    </footer>
+
+</body>
+
+</html>

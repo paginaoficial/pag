@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&family=Lemonada:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1ec203c188.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="imgs/icono.png">
+
+    <style>
+        :root{
+            --primary:#000;
+            --secundary:#000;
+            --background:#000;
+            --black-text:#fff;
+            --white-text:#ffffff;
+            --button-hover:#83DCEF;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Lemonada', cursive;
+            background-image: url(https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_960_720.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        nav{
+            background-color: var(--primary);
+            height: 10vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 0;
+        }
+
+        header h1{
+            color: var(--white-text);
+            font-size: 2rem;
+            font-family: 'Caveat', cursive
+            letter-spacing: .7rem;
+        }
+
+        nav ul{
+            display: flex;
+        }
+
+        nav ul li{
+            border-right: solid .1rem rgba(61, 61, 61, 0.41);
+
+        }
+
+        nav ul li:last-child{
+            border-right: none;
+        }
+
+        nav ul li a {
+            color: var(--white-text);
+            font-size: 1.2rem;
+            font-family: 'Pacifico', cursive;
+            padding: .8rem 1rem;
+            
+        }
+
+        nav ul li a:hover{
+            background-color: #03DCEF;
+            transition: all .5s;
+            border-radius: 10px;
+            box-shadow: 0px 0px 19px 5px #03DCEF; 
+            
+
+        }
+
+
+        nav ul li span a{
+            background-color: #03DCEF ;
+            font-size: 1.2rem;
+            padding: .8rem 1rem;
+            text-align: left;
+            border-radius: 10px;
+
+        } 
+
+
+
+        .drawer{
+            color: var(--white-text);
+            float: left;
+            cursor: pointer;
+            display: none;
+            margin-left: 1rem;
+            border: solid .1rem var(--white-text);
+            padding: .2rem;
+            border-radius: .1rem;
+        }
+
+        #ckbox{
+            display: none;
+        }
+
+        /* Estilos de la seccion principal */
+
+        main{
+            padding-top: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 160vh;
+
+        }
+
+        main h1{
+            font-size: 40px;
+            font-family: 'Pacifico', cursive;
+            color: var(--black-text);
+            text-align: center;
+            margin: 1rem;
+            display: flex;
+        }
+
+        main p{
+            color: var(--black-text);
+            text-align: center;
+            margin: 1rem 0;
+            display: flex;
+
+        }
+
+        main form{
+            display: flex;
+            justify-content: center;
+        }
+
+        main form button{
+            margin: 0 .5rem;
+            width: 8rem;
+            height: 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        main img{
+            height: 70vh;
+        }
+
+        footer{
+            background-color: var(--primary);
+            color: var(--white-text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+        }
+
+        @media(max-width:1020px){
+
+            body{
+                overflow: scroll;
+            }
+
+            nav{
+                justify-content: flex-start;
+                margin-bottom: 100px;
+            }
+
+            .drawer{
+                display: block;
+            }
+
+            nav h1{
+                margin-left: 1rem;
+                display: block;
+
+            }
+            nav p{
+                display: flex;
+            }
+
+            ul{
+                position: fixed;
+                width: 50%;
+                height: 100vh;
+                background-color: var(--background);
+                top: 10vh;
+                left: -100%;
+                text-align: left;
+                transition: all .5s;
+                display: flex;
+                flex-direction: column;
+                align-content: stretch;
+            }
+
+            nav ul li{
+                padding: 1rem 0;
+                display: flex;
+                flex-direction: column;
+                padding-left: 2rem;
+                border-bottom: solid .1rem rgba(201, 196, 196, 0.4) ;
+
+            }
+
+            #ckbox:checked ~ .menu-box{
+                left: 0;
+            }
+
+            .image{
+                display: none;
+            }
+
+            nav{
+                height: 100%;
+
+            }
+            footer{
+                height: 100%;
+            }
+
+
+
+
+
+        }
+            
+            @media(max-width:400px){
+            .contenido p b{
+                display: flex;
+                font-size: 10px;
+            }
+
+            .contenido{
+                margin: 0;
+                padding: 0;
+
+
+  
+            }
+
+            footer{
+                height: 100%;
+            }
+            }
+
+            @media(max-width:700px){
+                .contenido{
+                    font-size: 12px;
+                }
+         
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <input type="checkbox" id="ckbox">
+            <label for="ckbox" class="drawer">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+            <img src="imgs/logo.png" alt="logo" width="70px" height="auto">
+            <h1>Jiro's Resturant</h1>
+
+            <ul class="menu-box">
+                <li><a href="index.html" class="fa fa-home"> Inicio</a></li>
+                <li><span><a href="conocenos.html" class="fas fa-info-circle"> Conócenos</a></span></li>
+                <li><a href="menu1.html" class="fas fa-clipboard-list"> Menú</a></li>
+                <li><a href="reservaciones.html" class="far fa-credit-card"> Reservaciones</a></li>
+                <li><a href="contacto.html" class="fas fa-user"> Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="contenido">
+            <h1>NUESTRA HISTORIA</h1>
+            <p ><b>A principios de 1932, dos jóvenes amigos Alejandro Jiménez y Marcos Rodríguez decidieron unirse para crear un restaurante, donde se vendiera las comidas mas exquisitas para el paladar, tuviera buena atención para los clientes además de una cómoda y acogedora imagen. Primero ellos pensaron en un nombre, así que luego de varias decidieron ponerle Jiro’s Restaurant, que es una unión de ambos apellidos. En sus primeros años, el restaurante rompió esquemas cuando sus instalaciones eran muy modernas para esa época, además de que siempre tuvo una buena atención con sus visitantes, el servicio siempre fue de buena calidad y no tuvieron que esperar mucho tiempo para que su restaurante se convirtiera en uno de los mejores del país. Al pasar 10 años ya contaban 6 sucursales más alrededor del país, pero los jóvenes soñadores pensaron en expandir su restaurante a nivel internacional, en ese instante aumentaron el menú, y ya no solo se servía comida del país, sino que se tomaban en cuenta las recetas famosas del extranjero, así fue como el restaurante comenzó a triunfar a nivel internacional.
+            Luego de muchos años, aún se sigue distinguiendo su calidad, buen trato al público y su acogedora imagen.</b></p><br>
+            <h1>MISIÓN</h1>
+            <p ><b>Nosotros como restaurante nuestra principal tarea es alimentar al cliente, dándole calidad, satisfacción, y buen precio con nuestros productos; nos dedicamos a servir los platillos más exquisitos de la zona dando al consumidor una variedad de opciones para deleitar, y ser un espacio donde permita la realización personal y el desarrollo de los consumidores en el grupo.</b></p><br>
+            <h1>VISIÓN</h1>
+            <p ><b>En un futuro nuestras metas es seguir creciendo y no solo nacionalmente, nos gustaría ser una entidad internacional, en la que podamos servir nuestros productos y dar a conocer el arte culinaria de nuestra región e innovar nuevas recetas.</b></p><br>
+        </div>
+
+        <div class="image">
+            <img src="imgs/carne.png" alt="">
+
+        </div>
+    </main>
+
+    <footer>
+        <p>     JIRO'S RESTAURANT | © 2021 Todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
